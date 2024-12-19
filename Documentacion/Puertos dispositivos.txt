@@ -1,0 +1,19 @@
+Puertos dispositivos
+
+PC4
+FastEthernet 0 to R_isp GigabitEthernet0/0/0
+
+R_isp 
+GigabitEthernet0/0/0 to FastEthernet 0 PC4
+GigabitEthernet0/1 to R_principal GigabitEthernet0/0
+
+
+ 
+R_principal
+GigabitEthernet0/0 to GigabitEthernet0/1 R_isp
+GigabitEthernet0/1 to  GigabitEthernet0/0 R_Resi
+GigabitEthernet0/2 to Server_intranet fastethernet 0
+
+
+R_Resi
+GigabitEthernet0/1  Ethernet0  
