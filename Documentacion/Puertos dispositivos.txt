@@ -13,7 +13,24 @@ R_principal
 GigabitEthernet0/0 to GigabitEthernet0/1 R_isp
 GigabitEthernet0/1 to  GigabitEthernet0/0 R_Resi
 GigabitEthernet0/2 to Server_intranet fastethernet 0
+GigabitEthernet0/0/0 to  GigabitEthernet0/0/0 R_Resi
 
 
 R_Resi
-GigabitEthernet0/1  Ethernet0  
+ GigabitEthernet0/0 to GigabitEthernet0/1
+GigabitEthernet0/1  Ethernet0  Server_intranet
+GigabitEthernet0/2 to FastEthernet0/1 2960_1
+GigabitEthernet0/0/0 to  GigabitEthernet0/0/0 R_principal
+
+
+2960_1
+FastEthernet0/1 to  GigabitEthernet0/2 R_Resi
+FastEthernet0/2 to FastEthernet0/1  2960_2
+fastethernet0/3 to GigabitEthernet0/0/1 3650 1
+fastethernet0/4 to GigabitEthernet0/0/1 3650 2
+
+2960_2
+FastEthernet0/1 to FastEthernet0/2  2960_1
+FastEthernet0/2 to fastethernet0  TV_1
+fastethernet0/3 to fastethernet0 TV_2
+fastethernet0/4 to fastethernet0 TV_3 
